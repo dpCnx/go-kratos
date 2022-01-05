@@ -36,7 +36,7 @@ func main() {
 	})
 
 	cli, err := clientv3.New(clientv3.Config{
-		Endpoints:            []string{"10.64.146.48:49326"},
+		Endpoints:            []string{"10.64.146.48:49329"},
 		DialTimeout:          2 * time.Second,
 		DialKeepAliveTime:    3 * time.Second, // 每3秒ping一次服务器
 		DialKeepAliveTimeout: time.Second,     // 1秒没有返回则代表故障

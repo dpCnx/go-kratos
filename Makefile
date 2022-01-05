@@ -8,3 +8,8 @@ proto:
            --go-grpc_out=. --go-grpc_opt=paths=source_relative \
            --go-errors_out=paths=source_relative:. \
            $(API_PROTO_FILES)
+
+.PHONY: build
+build:
+	docker build -t app .
+	docker-compose up -d

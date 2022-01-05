@@ -4,17 +4,17 @@ service:
 grpc:
   address: 0.0.0.0:9000
 etcd:
-  address: 10.64.146.48:49326
+  address: 10.64.146.48:49329
 jaeger:
-  address: http://localhost:14268/api/traces
+  address: http://10.64.146.48:14268/api/traces
 mysql:
   user: root
   password: root
-  ip: 127.0.0.1
+  ip: 10.64.146.48
   port: 3306
   Database: demo
 redis:
-  ip: 127.0.0.1
+  ip: 10.64.146.48
   port: 6379
 log:
   file_name: ./log/info.log

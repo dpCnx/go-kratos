@@ -24,7 +24,7 @@ func TracerProvider(logger *logger.Logger, config *conf.Config) error {
 			semconv.ServiceNameKey.String(config.Service.Name),
 		)),
 	)
-	logger.Debug("jaeger start successful")
+	//logger.Debug("jaeger start successful")
 	otel.SetTracerProvider(tp)
 
 	return nil
