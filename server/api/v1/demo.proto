@@ -1,0 +1,48 @@
+syntax = "proto3";
+
+package api.v1;
+
+import "validate/validate.proto";
+import "google/api/annotations.proto";
+import "protoc-gen-openapiv2/options/annotations.proto";
+
+option go_package = "api/v1;api";
+
+option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_swagger) = {
+  info: {
+    title: "api"
+    version: "1.0"
+  }
+};
+
+service HelloServer{
+  rpc SayHello(HelloRequest)returns(HelloResponse){
+    option (google.api.http) = {
+      get: "/say-hello-get",
+    };
+    option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation) = {
+      description:"say-hello-get"
+    };
+  }
+  rpc SayHello2(HelloRequest)returns(HelloResponse){
+    option (google.api.http) = {
+      post: "/say-hello-post",
+      body: "*"
+    };
+  }
+}
+
+message HelloRequest{
+  string name = 1 [(validate.rules).string.min_len = 1];
+  int64 age = 2 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
+    description: "age description"
+    default:"1"
+  }];
+}
+
+message HelloResponse{
+  string msg = 1;
+  string message = 2 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
+    description: "信息"
+  }];
+}

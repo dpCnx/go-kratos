@@ -1,0 +1,30 @@
+service:
+  name: go-kratos
+  version: v1.0.0
+grpc:
+  address: 0.0.0.0:8000
+http:
+  address: 0.0.0.0:9000
+etcd:
+  address: 192.168.31.248:2379
+jaeger:
+  address: http://192.168.31.248:14268/api/traces
+mysql:
+  user: root
+  password: root
+  ip: 127.0.0.1
+  port: 3306
+  Database: demo
+redis:
+  ip: 127.0.0.1
+  port: 6379
+log:
+  file_name: ./log/info.log
+  max_size: 1
+  max_backups: 1
+  max_age: 1
+log_err:
+  file_name: ./log/err.log
+  max_size: 1
+  max_backups: 1
+  max_age: 1
