@@ -7,35 +7,33 @@
 package main
 
 import (
-	"github.com/go-kratos/kratos/v2"
 	"github.com/google/wire"
 	"go-kratos/conf"
 	"go-kratos/internal/repo"
+	"go-kratos/internal/server"
 	"go-kratos/internal/service"
 	"go-kratos/pkg/etcd"
 	"go-kratos/pkg/jeager"
 	"go-kratos/pkg/log"
-	"go-kratos/server"
 )
 
 // Injectors from wire.go:
 
-func App() *kratos.App {
+func App() *server.Server {
 	config := conf.LoadConfig()
 	logger := log.NewLogger(config)
 	db := repo.NewMysql(config, logger)
 	client := repo.NewRedis(config, logger)
 	data := repo.NewData(db, client)
 	demo := service.NewDemo(data, logger)
-	demo2 := service.NewDem2(logger)
-	grpcServer := server.NewGrpcServer(config, logger, demo, demo2)
-	httpServer := server.NewHTTPServer(config, logger, demo, demo2)
+	grpcServer := server.NewGrpcServer(config, logger, demo)
+	httpServer := server.NewHTTPServer(config, logger, demo)
 	registry := etcd.NewEtcd(logger, config)
 	tracerDownFunc := jeager.TracerProvider(logger, config)
-	app := server.NewKratosServer(grpcServer, httpServer, registry, config, tracerDownFunc)
-	return app
+	serverServer := server.NewServer(grpcServer, httpServer, registry, config, tracerDownFunc)
+	return serverServer
 }
 
 // wire.go:
 
-var providerSet = wire.NewSet(conf.LoadConfig, log.NewLogger, jeager.TracerProvider, etcd.NewEtcd, repo.NewMysql, repo.NewRedis, repo.NewData, service.NewDemo, service.NewDem2, server.NewHTTPServer, server.NewGrpcServer, server.NewKratosServer)
+var providerSet = wire.NewSet(conf.LoadConfig, log.NewLogger, jeager.TracerProvider, etcd.NewEtcd, repo.NewMysql, repo.NewRedis, repo.NewData, service.NewDemo, server.NewHTTPServer, server.NewGrpcServer, server.NewServer)

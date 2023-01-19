@@ -4,16 +4,15 @@
 package main
 
 import (
-	"github.com/go-kratos/kratos/v2"
 	"github.com/google/wire"
 
 	"go-kratos/conf"
 	"go-kratos/internal/repo"
+	"go-kratos/internal/server"
 	"go-kratos/internal/service"
 	"go-kratos/pkg/etcd"
 	"go-kratos/pkg/jeager"
 	logger "go-kratos/pkg/log"
-	"go-kratos/server"
 )
 
 var providerSet = wire.NewSet(
@@ -28,13 +27,12 @@ var providerSet = wire.NewSet(
 	repo.NewData,
 
 	service.NewDemo,
-	service.NewDem2,
 
 	server.NewHTTPServer,
 	server.NewGrpcServer,
-	server.NewKratosServer,
+	server.NewServer,
 )
 
-func App() *kratos.App {
+func App() *server.Server {
 	panic(wire.Build(providerSet))
 }

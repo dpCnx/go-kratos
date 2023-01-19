@@ -53,12 +53,12 @@ func (r *{{.ServiceType}}) Register() {
 func (r *{{$svrType}}) {{.Name}}(c *gin.Context){
 	var in {{.Request}}
 	{{- if .HasBody}}
-	if err := c.ShouldBindJSON(&in{{.Body}}); err != nil {
+	if err := c.ShouldBind(&in{{.Body}}); err != nil {
 		r.resp.Error(c,err)
 		return
 	}
 	{{- else}}
-	if err := c.BindQuery(&in); err != nil {
+	if err := c.ShouldBind(&in); err != nil {
 		r.resp.Error(c,err)
 		return
 	}
