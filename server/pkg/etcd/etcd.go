@@ -6,7 +6,7 @@ import (
 	"github.com/go-kratos/kratos/contrib/registry/etcd/v2"
 
 	"go-kratos/conf"
-	logger "go-kratos/pkg/log"
+	logger "go-kratos/pkg/logger"
 
 	etcdc "go.etcd.io/etcd/client/v3"
 	ggrpc "google.golang.org/grpc"

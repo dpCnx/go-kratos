@@ -9,7 +9,7 @@ import (
 	"go-kratos/conf"
 	middleware2 "go-kratos/internal/component/middleware"
 	"go-kratos/internal/service"
-	logger "go-kratos/pkg/log"
+	logger "go-kratos/pkg/logger"
 )
 
 type GrpcServer struct {

@@ -2,7 +2,7 @@ package main
 
 func main() {
 
-	// mLog := log.NewHelper(logger.NewLogger(config))
+	// mLog := logger.NewHelper(logger.NewLogger(config))
 
 	app := App()
 	app.Run()

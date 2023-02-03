@@ -12,7 +12,7 @@ import (
 	"go-kratos/internal/service"
 	"go-kratos/pkg/etcd"
 	"go-kratos/pkg/jeager"
-	logger "go-kratos/pkg/log"
+	logger "go-kratos/pkg/logger"
 )
 
 var providerSet = wire.NewSet(

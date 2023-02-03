@@ -16,7 +16,7 @@ import (
 	"go-kratos/internal/component/response"
 	"go-kratos/internal/component/swagger"
 	"go-kratos/internal/service"
-	logger "go-kratos/pkg/log"
+	logger "go-kratos/pkg/logger"
 )
 
 type HTTPServer struct {

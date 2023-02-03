@@ -19,12 +19,12 @@ redis:
   ip: 127.0.0.1
   port: 6379
 log:
-  file_name: ./log/info.log
+  file_name: ./logger/info.logger
   max_size: 1
   max_backups: 1
   max_age: 1
 log_err:
-  file_name: ./log/err.log
+  file_name: ./logger/err.logger
   max_size: 1
   max_backups: 1
   max_age: 1

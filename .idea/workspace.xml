@@ -5,42 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e6e1e4eb-ae70-4737-9ce7-8a4cddc6ebe2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/server/internal/component/client/grpc_test.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/internal/component/middleware/recover.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/internal/component/middleware/request.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/internal/component/response/response.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/internal/component/swagger/dist/favicon-16x16.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/internal/component/swagger/dist/favicon-32x32.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/internal/component/swagger/dist/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/internal/component/swagger/dist/oauth2-redirect.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/internal/component/swagger/dist/swagger-ui-bundle.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/internal/component/swagger/dist/swagger-ui-bundle.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/internal/component/swagger/dist/swagger-ui-es-bundle-core.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/internal/component/swagger/dist/swagger-ui-es-bundle-core.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/internal/component/swagger/dist/swagger-ui-es-bundle.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/internal/component/swagger/dist/swagger-ui-es-bundle.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/internal/component/swagger/dist/swagger-ui-standalone-preset.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/internal/component/swagger/dist/swagger-ui-standalone-preset.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/internal/component/swagger/dist/swagger-ui.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/internal/component/swagger/dist/swagger-ui.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/internal/component/swagger/dist/swagger-ui.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/internal/component/swagger/dist/swagger-ui.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/internal/component/swagger/options.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/internal/component/swagger/service.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/internal/component/swagger/swagger.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/internal/server/grpc.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/internal/server/http.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/internal/server/server.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/protoc-gen-gin-http/logic/template.go" beforeDir="false" afterPath="$PROJECT_DIR$/protoc-gen-gin-http/logic/template.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/server/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/api/v1/demo_http.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/api/v1/demo_http.pb.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/server/go.mod" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/server/go.sum" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/internal/service/demo.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/internal/service/demo.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/wire.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/wire.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/wire_gen.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/wire_gen.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

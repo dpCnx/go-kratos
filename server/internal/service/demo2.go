@@ -4,7 +4,7 @@ import (
 	"context"
 
 	"go-kratos/api/v1"
-	logger "go-kratos/pkg/log"
+	logger "go-kratos/pkg/logger"
 )
 
 var _ api.HelloServer2Server = (*Demo2)(nil)

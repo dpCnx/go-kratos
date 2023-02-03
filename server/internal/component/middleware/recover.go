@@ -9,7 +9,7 @@ import (
 	"github.com/go-kratos/kratos/v2/middleware"
 	"github.com/go-kratos/kratos/v2/transport"
 
-	logger "go-kratos/pkg/log"
+	logger "go-kratos/pkg/logger"
 )
 
 func Recover(logger *logger.Logger) middleware.Middleware {

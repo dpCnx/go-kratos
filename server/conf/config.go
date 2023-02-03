@@ -42,7 +42,7 @@ type Config struct {
 		MaxSize    int    `json:"max_size"`
 		MaxBackups int    `json:"max_backups"`
 		MaxAge     int    `json:"max_age"`
-	} `json:"log"`
+	} `json:"logger"`
 	LogErr struct {
 		FileName   string `json:"file_name"`
 		MaxSize    int    `json:"max_size"`

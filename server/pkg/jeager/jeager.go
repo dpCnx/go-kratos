@@ -10,7 +10,7 @@ import (
 	semconv "go.opentelemetry.io/otel/semconv/v1.4.0"
 
 	"go-kratos/conf"
-	logger "go-kratos/pkg/log"
+	logger "go-kratos/pkg/logger"
 )
 
 type TracerDownFunc func()

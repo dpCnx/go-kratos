@@ -10,7 +10,7 @@ import (
 
 	"go-kratos/conf"
 	mGorm "go-kratos/pkg/gorm"
-	mLog "go-kratos/pkg/log"
+	mLog "go-kratos/pkg/logger"
 
 	"gorm.io/driver/mysql"
 	"gorm.io/gorm"

@@ -14,14 +14,14 @@ import (
 	"go-kratos/internal/service"
 	"go-kratos/pkg/etcd"
 	"go-kratos/pkg/jeager"
-	"go-kratos/pkg/log"
+	"go-kratos/pkg/logger"
 )
 
 // Injectors from wire.go:
 
 func App() *server.Server {
 	config := conf.LoadConfig()
-	logger := log.NewLogger(config)
+	logger := logger.NewLogger(config)
 	db := repo.NewMysql(config, logger)
 	client := repo.NewRedis(config, logger)
 	data := repo.NewData(db, client)
@@ -36,4 +36,4 @@ func App() *server.Server {
 
 // wire.go:
 
-var providerSet = wire.NewSet(conf.LoadConfig, log.NewLogger, jeager.TracerProvider, etcd.NewEtcd, repo.NewMysql, repo.NewRedis, repo.NewData, service.NewDemo, server.NewHTTPServer, server.NewGrpcServer, server.NewServer)
+var providerSet = wire.NewSet(conf.LoadConfig, logger.NewLogger, jeager.TracerProvider, etcd.NewEtcd, repo.NewMysql, repo.NewRedis, repo.NewData, service.NewDemo, server.NewHTTPServer, server.NewGrpcServer, server.NewServer)

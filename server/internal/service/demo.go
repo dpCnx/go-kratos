@@ -5,7 +5,7 @@ import (
 
 	"go-kratos/api/v1"
 	"go-kratos/internal/repo"
-	logger "go-kratos/pkg/log"
+	logger "go-kratos/pkg/logger"
 )
 
 var _ api.HelloServerServer = (*Demo)(nil)
@@ -24,10 +24,6 @@ func NewDemo(data *repo.Data, log *logger.Logger) *Demo {
 func (d *Demo) SayHello(ctx context.Context, req *api.HelloRequest) (*api.HelloResponse, error) {
 
 	return nil, api.ErrorInvalidParameter("参数错误")
-
-	return &api.HelloResponse{
-		Msg: "hello:" + req.Name,
-	}, nil
 
 }
 
