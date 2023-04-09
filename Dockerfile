@@ -3,7 +3,7 @@ FROM golang:1.17 as builder
 WORKDIR /app
 ENV GOPROXY=https://goproxy.cn,direct
 WORKDIR /build
-COPY . .
+COPY server .
 RUN CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -o app go-kratos
 
 FROM alpine:3.11
